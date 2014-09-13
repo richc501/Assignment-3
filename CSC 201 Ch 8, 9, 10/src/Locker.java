@@ -22,8 +22,7 @@ public class Locker {
 	public void putBookInLocker()//adds book to locker
 	{
 		//openLocker();
-		System.out.println("Input Combo to add"
-				+ " book");
+		System.out.println("Input Combo to add book");
 		if(openLocker())
 		{
 			numberOfBooks++;
