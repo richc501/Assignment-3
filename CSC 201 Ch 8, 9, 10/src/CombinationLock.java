@@ -19,15 +19,15 @@ public class CombinationLock {
 	public void reset()
 	{
 		lockIndex=0;
-		this.number1=0;
-		this.number2=0;
-		this.number3=0;
+		//this.number1=0;
+		//this.number2=0;
+		//this.number3=0;
 	}
-	public void openLock(int number1, int number2, int number3)
+	public boolean openLock(int number1, int number2, int number3)
 	{
-		boolean openLocker=false;
 		int testNumber1=0,testNumber2=0,testNumber3=0;//temporary numbers to check if lock is correct
 		int numberOfTicks;
+		
 		
 		numberOfTicks=(lock.length)-number1;
 		System.out.println("tick "+numberOfTicks);
@@ -52,14 +52,12 @@ public class CombinationLock {
 		if(testNumber1==number1&&testNumber2==number2&&testNumber3==number3)
 		{
 			System.out.println("Lock open.");
-			openLocker=true;
-			isOpen(openLocker);
+			return true;
 		}
 		else
 		{
 			System.out.println("Incorrect combination.");
-			openLocker=false;
-			isOpen(openLocker);
+			return false;
 		}
 	}
 	public int turnRight(int numberOfTicks)
@@ -73,10 +71,6 @@ public class CombinationLock {
 			}
 			System.out.println(lock[lockIndex]);
 		return lockIndex;
-	}
-	public static boolean isOpen(boolean openLocker)
-	{
-		return openLocker;
 	}
 	public int turnLeft(int numberOfTicks)
 	{

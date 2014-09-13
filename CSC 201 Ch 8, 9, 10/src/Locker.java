@@ -21,30 +21,38 @@ public class Locker {
 	}
 	public void putBookInLocker()//adds book to locker
 	{
-		openLocker();
-		if(CombinationLock.isOpen(false)==true)
+		//openLocker();
+		System.out.println("Input Combo to add"
+				+ " book");
+		if(openLocker())
 		{
-		numberOfBooks++;
-	
+			numberOfBooks++;
 		}
 	}
 	public void removeBookFromLocker()//removes book from locker
 	{
-		if(numberOfBooks>0)
-			numberOfBooks--;
-		else
-			System.out.println("No books are in the locker \n");
+		System.out.println("Input Combo to remove book");
+		if(openLocker())
+		{
+			if(numberOfBooks>0)
+				numberOfBooks--;
+			else
+				System.out.println("No books are in the locker \n");
+		}
 	}
-	public void openLocker()//opens locker
+	public boolean openLocker()//opens locker
 	{
 		//asks for combination
+		comboLock.reset();
 		System.out.println("Input the first combination number: ");
 		int num1 = keyboard.nextInt();
 		System.out.println("Input the second combination number: ");
 		int num2 = keyboard.nextInt();
 		System.out.println("Input the third combination number: ");
 		int num3 = keyboard.nextInt();
-		comboLock.openLock(num1, num2, num3);//opens lock
+
+		//comboLock.openLock(num1, num2, num3);//opens lock
+		return comboLock.openLock(num1, num2, num3);
 	}
 	//getters and setters
 	public int getNumberOfBooks() {
