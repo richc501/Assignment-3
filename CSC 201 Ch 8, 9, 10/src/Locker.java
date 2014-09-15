@@ -27,6 +27,8 @@ public class Locker {
 		{
 			numberOfBooks++;
 		}
+		else
+			System.out.println("FAILED");
 	}
 	public void removeBookFromLocker()//removes book from locker
 	{
@@ -38,6 +40,8 @@ public class Locker {
 			else
 				System.out.println("No books are in the locker \n");
 		}
+		else
+			System.out.println("FAILED");
 	}
 	public boolean openLocker()//opens locker
 	{
