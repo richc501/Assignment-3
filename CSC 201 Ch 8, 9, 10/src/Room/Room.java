@@ -4,11 +4,11 @@ public class Room {
 	private String wall, floor;
 	private int windows;
 	
-	public Room()
+	public Room()//default constructor
 	{
 		wall="";
 	}
-	public Room(String colorOfWall, String typeOfFloor,int numberOfWindows)
+	public Room(String colorOfWall, String typeOfFloor,int numberOfWindows)//constructor
 	{
 		this.wall=colorOfWall;
 		this.floor=typeOfFloor;

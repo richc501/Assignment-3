@@ -2,12 +2,12 @@ package Cycle;
 
 public class Cycle {
 	private int numberOfWheels, weight;
-	public Cycle()
+	public Cycle()//default constructor
 	{
 		numberOfWheels=100;
 		weight=1000;
 	}
-	public Cycle(int numberOfWheels, int weight)
+	public Cycle(int numberOfWheels, int weight)//constructor
 	{
 		this.numberOfWheels=numberOfWheels;
 		this.weight=weight;
