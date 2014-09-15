@@ -1,3 +1,4 @@
+package Locker;
 import java.util.Scanner;
 public class Locker {
 	private int numberOfBooks, lockerNumber;

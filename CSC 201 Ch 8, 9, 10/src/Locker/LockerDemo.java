@@ -1,3 +1,5 @@
+package Locker;
+
 //import java.util.Scanner;
 public class LockerDemo {
 

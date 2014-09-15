@@ -1,3 +1,4 @@
+package Locker;
 import java.util.Scanner;
 public class CombinationLock {
 	public Scanner keyboard = new Scanner(System.in);
