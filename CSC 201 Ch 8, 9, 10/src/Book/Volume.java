@@ -2,22 +2,23 @@ package Book;
 
 public class Volume {
 	private String volumeName;
+	StringBuilder output = new StringBuilder(" ");
 	private int numberOfBooks;
 	private Book[] book=new Book[0];
 
-	public Volume()
+	public Volume()//default constructor
 	{
 		volumeName=null;
 		numberOfBooks=0;
 		book=new Book[0];
 	}
-	public Volume(String volumeName, int numberOfBooks, Book[] book)
+	public Volume(String volumeName, int numberOfBooks, Book[] book)//constructor
 	{
 		this.volumeName=volumeName;
 		this.numberOfBooks=numberOfBooks;
 		this.book= new Book[numberOfBooks];
 	}
-	public Book[] getBookArray()
+	public Book[] getBookArray()//sets array of books
 	{
 
 		int version=1, numberOfPages=(int) ((Math.random()*100)+1);;
@@ -27,7 +28,8 @@ public class Volume {
 			String author = "Author"+version;
 			Book book1 = new Book(title, author, numberOfPages);
 			book[i]=book1;
-			System.out.println(book[i]);
+			output = output.append(book[i]);
+			output = output.append("\n        ");
 			version++;
 			numberOfPages=(int) ((Math.random()*100)+1);
 		}
@@ -60,8 +62,8 @@ public void setBook(Book[] book) {
 	this.book = book;
 }
 public String toString() {
-	return "Volume [volumeName=" + volumeName + ", numberOfBooks="
-			+ numberOfBooks + ", book=" + book + "]";
+	return "Volume volumeName=" + volumeName + ", numberOfBooks="
+			+ numberOfBooks + "\n, book=" + output;
 }
 
 }

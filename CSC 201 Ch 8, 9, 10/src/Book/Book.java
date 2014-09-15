@@ -3,13 +3,13 @@ package Book;
 public class Book {
 	private String title, author;
 	private int numberOfPages;
-	public Book()
+	public Book()//default constructor
 	{
 		title=null;
 		author=null;
 		numberOfPages=0;
 	}
-	public Book(String title, String author, int numberOfPages)
+	public Book(String title, String author, int numberOfPages)//constructor
 	{
 		this.title=title;
 		this.author=author;
@@ -36,8 +36,8 @@ public class Book {
 	}
 
 	public String toString() {
-		return "Book [title=" + title + ", author=" + author
-				+ ", numberOfPages=" + numberOfPages + "]";
+		return "Book title=" + title + ", author=" + author
+				+ ", numberOfPages=" + numberOfPages;
 	}
 	
 	
